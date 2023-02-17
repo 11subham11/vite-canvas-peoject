@@ -1,8 +1,11 @@
 import React from 'react'
+import DraggableList from './Drag/DraggableList'
 
 const Sidebar = () => {
   return (
-    <div>Sidebar</div>
+    <div>
+      <DraggableList />
+    </div>
   )
 }
 

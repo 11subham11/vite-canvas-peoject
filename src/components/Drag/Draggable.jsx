@@ -1,9 +1,29 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 
-const Draggable = () => {
+
+// this will wrap the element we need to make draggable from the left Siderbar
+const Draggable = ({type , element}) => {
+
+    const [{ isDragging }, drag] = useDrag({
+        item: { type }, // we can say it as an identifier here for the element
+        collect: monitor => ({
+          isDragging: monitor.isDragging(),
+        }),//listens state of drag
+      });
+
   return (
-    <div>Draggable</div>
+    <>
+    <div
+      ref={drag}
+      style={{
+        opacity: isDragging ? 0.5 : 1,
+        cursor: 'move',
+      }}
+    >
+      {element}
+    </div>
+    </>
   )
 }
 
