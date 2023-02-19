@@ -3,8 +3,8 @@ import "./App.css";
 import Canvas from "./components/Canvas";
 import Sidebar from "./components/Sidebar";
 
-import { DndProvider } from 'react-dnd';
-import {HTML5Backend} from 'react-dnd-html5-backend';
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   const [layout, setLayout] = useState({ cols: 12, rows: [] });
@@ -18,13 +18,13 @@ function App() {
     <>
       <div>
         <DndProvider backend={HTML5Backend}>
-        <Sidebar />
+          <Sidebar />
           <Canvas
             layout={layout}
             components={components}
             onLayoutChange={handleLayoutChange}
           />
-        </DndProvider>          
+        </DndProvider>
       </div>
     </>
   );
