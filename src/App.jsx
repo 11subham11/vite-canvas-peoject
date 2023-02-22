@@ -10,7 +10,6 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 function App() {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [userName , setUserName] = useState(null)
   const [edit, setEdit] = useState(false);
   const [inputElements, setInputElements] = useState([
     {
